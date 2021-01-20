@@ -47,14 +47,14 @@ export default function solution(n: number, edges: Edge[]): number {
 }
 
 function buildGraph(edges: Edge[]): Graph {
-  const graph: Graph = {};
+  return edges.reduce((graph, edge) => {
+    const [from, to] = edge;
 
-  edges.forEach(([from, to]) => {
     if (!graph[from]) graph[from] = [];
-    if (!graph[to]) graph[to] = [];
     graph[from].push(to);
+    if (!graph[to]) graph[to] = [];
     graph[to].push(from);
-  });
 
-  return graph;
+    return graph;
+  }, {} as Graph);
 }

@@ -1,4 +1,4 @@
-import solution, { Edge } from "../farthestNodes";
+import solution, { Edge } from "./farthestNodes";
 
 const n1 = 6;
 const edge1: Edge[] = [
@@ -24,7 +24,7 @@ const edge2: Edge[] = [
   [2, 4],
 ];
 
-describe("Farthest Nodes", () => {
+describe("Graph/Farthest Nodes", () => {
   it("should return 3", () => {
     expect(solution(n1, edge1)).toEqual(3);
   });

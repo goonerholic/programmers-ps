@@ -43,8 +43,6 @@ export default function solution(n: number, edges: Edge[]): number {
     }
   });
 
-  console.log(dist);
-
   return answer;
 }
 
